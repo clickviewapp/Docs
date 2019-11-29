@@ -12,18 +12,18 @@ GET https://online.clickview.co.nz/v2.1/rss/feed
 
 ## Parameters
 
-| Name | Required | Description | Default | Example |
-| ---- | -------- | ----------- | ------- | ------- |
-| schoolId | required | The ID of the school | | `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE` |
-| max | optional | The maximum number of items to return | | `5` |
-| since | optional | Filter records that have been added since the date provided | | `2019-01-01` |
-| maxRatingCode | optional | The maximum rating code allowed to be returned. Value must be URL encoded. See [here](ratings.md) for a list of ratings | | `MA15%2B`
+| Name | Required | Description | Example |
+| ---- | -------- | ----------- | ------- |
+| schoolId | required | The ID of the school | `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE` |
+| max | optional | The maximum number of items to return | `5` |
+| since | optional | Filter records that have been added since the date provided | `2019-01-01` |
+| maxRatingCode | optional | The maximum rating code allowed to be returned. Value must be URL encoded. See [here](ratings.md) for a list of ratings | `MA15%2B` |
 
 ## Headers
 
-| Name | Required | Description | Default | Example |
-| ---- | -------- | ----------- | ------- | ------- |
-| x-rss-auth-token | required | The authentication token used to access the feed. This is given to you by ClickView | | `umeqSLGrYj6vLlQu` |
+| Name | Required | Description | Example |
+| ---- | -------- | ----------- | ------- |
+| x-rss-auth-token | required | The authentication token used to access the feed. This is given to you by ClickView | `umeqSLGrYj6vLlQu` |
 
 ## Example Response
 
