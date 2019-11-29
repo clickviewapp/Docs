@@ -46,8 +46,8 @@ GET https://online.clickview.co.nz/v2.1/rss/search
       <title>View and Do: Maths Investigations : S01E07 - Enough Time</title>
       <pubDate>Thu, 02 May 2019 00:47:13 Z</pubDate>
       <a10:updated>2019-10-09T23:14:57Z</a10:updated>
-      <a10:content type="video/mp4" src="https://online.clickview.com.au/share/embed?p=-NbJz&amp;customerId=F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE" />
-      <media:content medium="video" duration="1047000" expression="full" url="https://online.clickview.com.au/share/embed?p=bzz&amp;customerId=F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE">
+      <a10:content type="video/mp4" src="https://online.clickview.com.au/share/embed?p=cv&amp;customerId=F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE" />
+      <media:content medium="video" duration="1047000" expression="full" url="https://online.clickview.com.au/share/embed?p=cv&amp;customerId=F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE">
         <media:thumbnail url="https://img.clickviewapp.com/v1/thumbnails/953173" width="256" height="144" />
         <media:player url="https://online.clickview.com.au/libraries/videos/10078432/enough-time?customerId=F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE&amp;ssoRedirect=true" />
         <media:title type="plain">Enough Time</media:title>
