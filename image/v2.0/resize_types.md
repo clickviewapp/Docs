@@ -1,4 +1,4 @@
-# ClickView Image API Size Presets
+# ClickView Image Resize Types
 
 The image resize types.
 
