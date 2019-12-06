@@ -15,15 +15,15 @@ GET https://img.clickviewapp.com/v2/{imageType}/{imageId}
 
 ## Query Parameters
 
-| Parameter | Required | Description | Example |
-| --------- | -------- |------------ | ------- |
-| width | optional | The width of the image in pixels | `1920` |
-| height | optional | The height of the image in pixels | `1080` |
-| size | optional | Presets for the width and height. See [here](image_types.md) for a list of sizes | `small` |
-| ratio | optional | The ratio to lock the image to if either the width or height is left empty | `16:9` | 
-| resizeType | optional | The resize method to use when the desired aspect ratio doesn't match the original aspect ratio. See [here](resize_types.md) for a list of resize types | `cover` |
-| bgColor | optional | The hex color of the padding (ignored if a `resizeType` other than `crop` is used) | `f8981d` |
-| imageQuality | optional | The image quality as a value from `0-100` | `90` |
+| Parameter | Required | Description | Default | Example |
+| --------- | -------- |------------ | ------- | ------- |
+| width | optional | The width of the image in pixels | N/A | `1920` |
+| height | optional | The height of the image in pixels | N/A | `1080` |
+| size | optional | Presets for the width and height. See [here](image_types.md) for a list of sizes | N/A | `small` |
+| ratio | optional | The ratio to lock the image to if either the width or height is left empty | N/A | `16:9` | 
+| resizeType | optional | The resize method to use when the desired aspect ratio doesn't match the original aspect ratio. See [here](resize_types.md) for a list of resize types | `crop` | `cover` |
+| bgColor | optional | The hex color of the padding (ignored if a `resizeType` other than `crop` is used) | `ffffff` | `f8981d` |
+| imageQuality | optional | The image quality as a value from `0-100` | `100` | `50` |
 
 ## Examples
 
