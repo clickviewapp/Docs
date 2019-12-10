@@ -36,4 +36,4 @@ ClickView will perform a HTTP `post` to the provided `redirectUri`. The body wil
 
 | Key      | Type     | Description | Example |
 | -------- | -------- | ----------- | ------- |
-| schoolId | `String` | The SchoolId that the authenticated user is part of. | `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE`
+| schoolId | `String` | The SchoolId that the authenticated user is part of. | `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE`|
