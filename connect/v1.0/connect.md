@@ -1,8 +1,6 @@
 # ClickView Connect API
 
-# RSS Feed
-
-The ClickView Connect API is used to securly obtain the information about the signed in user or school. Please contact ClickView to obtain a `clientId` if you wish to use this API.
+The ClickView Connect API is used to securely obtain the information about the signed in user or school. Please contact ClickView to obtain a `clientId` if you wish to use this API.
 
 ## Resource URL
 
@@ -36,4 +34,4 @@ ClickView will perform a HTTP `post` to the provided `redirectUri`. The body wil
 
 | Key      | Type     | Description | Example |
 | -------- | -------- | ----------- | ------- |
-| schoolId | `String` | The SchoolId that the authenticated user is part of. | `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE`|
+| schoolId | `String` | The SchoolId that the authenticated user is part of. | `"F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE"`|
