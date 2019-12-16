@@ -14,7 +14,7 @@ GET https://online.clickview.co.nz/v1/connect
 
 | Name | Required | Description | Default | Example |
 | ---- | -------- | ----------- | ------- | ------- |
-| clientId | required | You clientId || `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE` |
+| clientId | required | Your clientId || `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE` |
 | redirectUri | required | The URI ClickView will use to post information to || `https://mydomain.com/hooks/clickview` |
 | redirectMethod | optional | The method for ClickView to call the `redirectUri`. | `post` | `post` |
 
