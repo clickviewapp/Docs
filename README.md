@@ -6,3 +6,4 @@ Documentation for ClickView integration
 
 - [RSS](rss/rss.md)
 - [Image](image/image.md)
+- [Connect API](connect/connect.md)
