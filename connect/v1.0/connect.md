@@ -45,7 +45,7 @@ First we percent encode our keys and values (step 1), sort the parameters in alp
 
 `client_id=abc123&redirect_uri=https%3A%2F%2Fmydomain.com%2Fhooks%2Fclickview`
 
-Next we get your provided secret key (this is not your `client_id`) and the output string from the above steps and run that though the HMAC-SHAA1 function. For this example we are using a secret key of "`mysecretkey`". This should output the following binary value:
+Next we get your provided secret key (this is not your `client_id`) and the output string from the above steps and run that though the HMAC-SHA1 function. For this example we are using a secret key of "`mysecretkey`". This should output the following binary value:
 
 `5C 71 86 85 EC 02 E9 E5 D6 3B D6 C0 CD 5A 6C 80 1B F3 67 AC`
 
