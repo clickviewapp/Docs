@@ -14,9 +14,9 @@ GET https://online.clickview.co.nz/v1/connect
 
 | Name | Required | Description | Default | Example |
 | ---- | -------- | ----------- | ------- | ------- |
-| client_id | required | Your client ID || `abc123` |
-| redirect_uri | required | The URI ClickView will use to post information to || `https://mydomain.com/hooks/clickview` |
-| signature | required | The signature of the request. See below for an example on how to generate a signature | | `dGhpcyBpcyBub3QgYSByZWFsIHNpZ25hdHVyZSA6KA==` |
+| client_id | required | Your client ID. || `abc123` |
+| redirect_uri | required | The URI ClickView will use to post information to. || `https://mydomain.com/hooks/clickview` |
+| signature | required | The signature of the request. See [below](#creating-a-signature) for an example on how to generate a signature. | | `dGhpcyBpcyBub3QgYSByZWFsIHNpZ25hdHVyZSA6KA==` |
 
 ## Creating a signature
 
@@ -55,10 +55,10 @@ Finally, we convert the binary into a base64 string to create the final signatur
 
 ## Response
 
-ClickView will perform a HTTP `post` to the provided `redirect_uri`. The body will contain a `application/x-www-form-urlencoded` response. The data included in this response is detailed below [Data](#data).
+ClickView will perform a HTTP `post` to the provided `redirect_uri`. The body will contain a `application/x-www-form-urlencoded` response. The data included in this response is detailed [below](#data).
 
 ### Data
 
 | Key      | Type     | Description | Example |
 | -------- | -------- | ----------- | ------- |
-| schoolId | `string` | The School Id that the authenticated user is a member of | `"F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE"`|
+| schoolId | `string` | The School Id that the authenticated user is a member of. | `"F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE"`|
