@@ -57,8 +57,12 @@ Finally, we convert the binary into a base64 string to create the final signatur
 
 ClickView will perform a HTTP `post` to the provided `redirect_uri`. The body will contain a `application/x-www-form-urlencoded` response. The data included in this response is detailed [below](#data).
 
+The response will also contain a signature of the response parameters (excluding the signature). This will allow you to verify the payload being posted back to you. To verify the signature please see above.
+
 ### Data
 
 | Key      | Type     | Description | Example |
 | -------- | -------- | ----------- | ------- |
 | schoolId | `string` | The School Id that the authenticated user is a member of. | `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE`|
+| region   | `string` | The region of the authenticated user. Region is in the format of [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). | `"AU"`|
+| signature| `string` | The signed | `"SSB3b25kZXIgaWYgQ2FtIHdpbGwgZXZlciBkZWNvZGUgdGhpcyBzdHJpbmc"`|
