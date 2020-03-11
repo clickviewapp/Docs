@@ -14,9 +14,9 @@ GET https://online.clickview.co.nz/v1/connect
 
 | Name | Required | Description | Default | Example |
 | ---- | -------- | ----------- | ------- | ------- |
-| client_id | required | Your client ID. || `abc123` |
-| redirect_uri | required | The URI ClickView will use to post information to. || `https://mydomain.com/hooks/clickview` |
-| signature | required | The signature of the request. See [below](#creating-a-signature) for an example on how to generate a signature. | | `dGhpcyBpcyBub3QgYSByZWFsIHNpZ25hdHVyZSA6KA==` |
+| client_id | required | Your client ID. || `"abc123"` |
+| redirect_uri | required | The URI ClickView will use to post information to. || `"https://mydomain.com/hooks/clickview"` |
+| signature | required | The signature of the request. See [below](#creating-a-signature) for an example on how to generate a signature. | | `"dGhpcyBpcyBub3QgYSByZWFsIHNpZ25hdHVyZSA6KA=="` |
 
 ## Creating a signature
 
@@ -38,8 +38,8 @@ For the following example on creating a signature we will be using the following
 
 | Key | Value |
 | ---- | ---- |
-| `client_id` | `abc123` |
-| `redirect_uri` | `https://mydomain.com/hooks/clickview` |
+| `client_id` | `"abc123"` |
+| `redirect_uri` | `"https://mydomain.com/hooks/clickview"` |
 
 First we percent encode our keys and values (step 1), sort the parameters in alphabetical order (step 2) and append them together using the steps outlined in step 3. This should produce the following output string:
 
@@ -51,14 +51,18 @@ Next we get your provided secret key (this is not your `client_id`) and the outp
 
 Finally, we convert the binary into a base64 string to create the final signature string:
 
-`XHGGhewC6eXWO9bAzVpsgBvzZ6w=`
+`"XHGGhewC6eXWO9bAzVpsgBvzZ6w="`
 
 ## Response
 
 ClickView will perform a HTTP `post` to the provided `redirect_uri`. The body will contain a `application/x-www-form-urlencoded` response. The data included in this response is detailed [below](#data).
 
+The response will also contain a signature of the response parameters (excluding the signature). This will allow you to verify the payload being posted back to you. To verify the signature please see above. To verify the signature please see above. Note: Pay special attention to the fact that the request parameters are lower snake case but the response parameters are lower camel case.
+
 ### Data
 
 | Key      | Type     | Description | Example |
 | -------- | -------- | ----------- | ------- |
-| schoolId | `string` | The School Id that the authenticated user is a member of. | `F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE`|
+| schoolId | `string` | The School Id that the authenticated user is a member of. | `"F437FEA9-F21A-4CA6-9C2F-E1792CF87CFE"`|
+| region   | `string` | The region of the authenticated user. Region is in the format of [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). | `"AU"`|
+| signature| `string` | The signature of the parameters. | `"SSB3b25kZXIgaWYgQ2FtIHdpbGwgZXZlciBkZWNvZGUgdGhpcyBzdHJpbmc"`|
