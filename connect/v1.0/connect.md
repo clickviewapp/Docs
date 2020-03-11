@@ -57,7 +57,9 @@ Finally, we convert the binary into a base64 string to create the final signatur
 
 ClickView will perform a HTTP `post` to the provided `redirect_uri`. The body will contain a `application/x-www-form-urlencoded` response. The data included in this response is detailed [below](#data).
 
-The response will also contain a signature of the response parameters (excluding the signature). This will allow you to verify the payload being posted back to you. To verify the signature please see above. To verify the signature please see above. Note: Pay special attention to the fact that the request parameters are lower snake case but the response parameters are lower camel case.
+The response will also contain a signature of the response parameters (excluding the signature). This will allow you to verify the payload being posted back to you. 
+
+To verify the signature please see above. Note: Pay special attention to the fact that the request parameters are lower snake case but the response parameters are lower camel case.
 
 ### Data
 
