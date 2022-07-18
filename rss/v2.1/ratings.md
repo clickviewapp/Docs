@@ -2,13 +2,16 @@
 
 Ratings for each ClickView region.
 
-| AU | NZ | UK |
-| ---- | ---- | ---- |
-| E | E | E |
-| G | G | U |
-| PG | PG | PG |
-| M | M | 12A |
-| | R13 | |
-| MA15+ | R15 | 15 |
-| | R16 | |
-| R18+ | R18 | 18  |
+| AU    | NZ  | UK  | US    |
+|-------|-----|-----|-------|
+| E     | E   | E   | E     |
+|       |     |     | TV-Y  |
+|       |     |     | TV-Y7 |
+| G     | G   | U   | TV-G  |
+| PG    | PG  | PG  | TV-PG |
+| M     | M   | 12A | TV-14 |
+|       | R13 |     |       |
+| MA15+ | R15 | 15  |       |
+|       | R16 |     |       |
+|       |     |     | TV-MA |
+| R18+  | R18 | 18  |       |
