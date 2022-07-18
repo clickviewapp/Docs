@@ -4,10 +4,11 @@ The ClickView RSS Feed is used to obtain the contents of a ClickView Online scho
 
 ## Resource URL
 
-```http
+```
 GET https://online.clickview.com.au/v2.1/rss/feed
 GET https://online.clickview.co.uk/v2.1/rss/feed
 GET https://online.clickview.co.nz/v2.1/rss/feed
+GET https://online.clickview.us/v2.1/rss/feed
 ```
 
 ## Parameters
