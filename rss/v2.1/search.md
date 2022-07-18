@@ -4,10 +4,11 @@ The ClickView RSS Search is used to search and obtain the contents of a ClickVie
 
 ## Resource URL
 
-```http
+```
 GET https://online.clickview.com.au/v2.1/rss/search
 GET https://online.clickview.co.uk/v2.1/rss/search
 GET https://online.clickview.co.nz/v2.1/rss/search
+GET https://online.clickview.us/v2.1/rss/search
 ```
 
 ## Parameters
