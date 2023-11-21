@@ -22,6 +22,7 @@ Here is a simple example of an iframe linking to your web application.
   id="clickview-video-select"
   width="800"
   height="500"
+  frameborder="0"
   src="https://integrations.clickviewapp.com/picker?clientId=YOUR_CLIENT_ID">
 </iframe>
 ```
@@ -56,13 +57,19 @@ cvEventsApi.on('cv-lms-addvideo', (event, details) => {
 
 `event` will be a MessageEvent object (you will generally not need to use this object). See: [https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent](https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent);
 
-`details` An object with details about the video the user has selected.
+`details` An object with details about the video the user has selected. Here is an example of a details object.
 
-|Property|Description|
-|---|---|
-|title|The title of the video the user has chosen.|
-|thumbnailUrl|A url to a thumbnail image of the selected video.|
-|mediaId|An identifier for the selected video. You will need to persist this value in order to create a view key when users attempt to watch this video.|
+```js
+{
+  title: 'Example video',
+  thumbnailUrl: 'https://example.com/video-image.png',
+  mediaId: '123456'
+}
+```
+
+- `title`: The title of the selected video.
+- `thubmnailUrl`: A url pointing to an image for the selected video. These images will always be a 16:9 aspect ratio.
+- `mediaId`: An identifier for the video which may be used to create a view key.
 
 ### 3. Save the selected mediaId
 The `mediaId` which is returned on the `details` property of the `cv-lms-addvideo` event will be used by you to create a view key each time a user attempts to watch the selected video. You will need to store this selected `mediaId`.
