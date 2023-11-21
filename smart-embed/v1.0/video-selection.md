@@ -68,7 +68,7 @@ cvEventsApi.on('cv-lms-addvideo', (event, details) => {
 ```
 
 - `title`: The title of the selected video.
-- `thubmnailUrl`: A url pointing to an image for the selected video. These images will always be a 16:9 aspect ratio.
+- `thubmnailUrl`: A url pointing to an image for the selected video. These images will always be a 16:9 aspect ratio. Please see [ClickView Image Api](../../image/image.md) for information about the query parameters that are available on our thumbnails.
 - `mediaId`: An identifier for the video which may be used to create a view key.
 
 ### 3. Save the selected mediaId
