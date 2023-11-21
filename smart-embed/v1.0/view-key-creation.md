@@ -32,60 +32,7 @@ curl --request POST \
 ```
 
 - Replace `YOUR_ACCESS_TOKEN` and `YOUR_MEDIA_ID` with your actual Client ID and Client Secret.
-- Please see [additional data](#additional-data) for information on populating the `additionalData` option.
-
-#### Additional Data
-The `additionalData` property on the create view key request will be used to pass user information to ClickView. Below is a generic outline of the expected properties, however the data being sent here will be an agreement between you and ClickView, additional properties outside of what is specified may be expected by ClickView. Similarly certain properties may be required that are listed as optional below.
-
-|Property Name|Required|Description|
-|---|---|---|
-|`isStudent`|Required|A boolean value identifying if the user is a student.|
-|`firstName`|Required for teachers|The users first name.|
-|`surname`|Required for teachers|The users surname.|
-|`email`|Required for teachers|The user's email address.|
-|`jobTitle`|Optional|The user's job title in their school or district.|
-|`schoolName`|Optional|The name of the school the user belongs to.|
-|`schoolId`|Optional|An identifier you may have on hand for the school.|
-|`districtName`|Optional|The name of the district the user belongs to.|
-|`districtId`|Optional|Any identifier you may have on hand for the district.|
-
-_NOTE: If `isStudent` is set to `true` and `firstName`, `surname` or `email` are populated, the required will error out._
-
-**Example teacher payload**
-
-Here is an example of a create view key request payload with all the metadata populated.
-
-```json
-{
-  "mediaId": "YOUR_MEDIA_ID",
-  "additionalData": {
-    "isStudent": false,
-    "firstName": "Valerie",
-    "surname": "Frizzle",
-    "email": "valerie.frizzle@school.gov",
-    "jobTitle": "Bus driver",
-    "schoolName": "Walkerville Elementary School",
-    "schoolId": "S123",
-    "districtName": "Riverside Unified School District",
-    "districtId": "D123"
-  }
-}
-```
-
-**Example student payload**
-
-Here is an example of a create view key request payload for a student.
-
-```json
-{
-  "mediaId": "YOUR_MEDIA_ID",
-  "additionalData": {
-    "isStudent": true,
-    "districtName": "Riverside Unified School District",
-    "districtId": "D123"
-  }
-}
-```
+- Please see [Additional data for creating a view key](additional-data.md) for information on populating the `additionalData` option.
 
 ### 2. View key response
 A successful response will return a JSON object containing the `viewKey` field, which you will use to embed a ClickView video. Here is an example of a successful JSON response:
