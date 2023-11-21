@@ -19,7 +19,6 @@ To obtain an access token, make a POST request to the token endpoint provided by
 curl --request POST \
   --url https://auth.clickviewapp.com/connect/token \
   --header 'Content-Type: application/x-www-form-urlencoded' \
-  --header 'User-Agent: insomnia/2023.5.8' \
   --data grant_type=client_credentials \
   --data client_id=YOUR_CLIENT_ID \
   --data client_secret=YOUR_CLIENT_SECRET \
@@ -70,8 +69,7 @@ Refer to the [OAuth 2.0 Specification](https://tools.ietf.org/html/rfc6749#secti
 
 ## Best Practices
 - Securely store the `client_secret`.
-- Handle token expiration gracefully by either retrying the request or prompting the user to re-authenticate.
-- Ensure all communications with the authorization server are performed over HTTPS to keep credentials secure.
+- Handle token expiration gracefully by either retrying the request.
 
 ## Next Steps
 After obtaining your access token, you may proceed to use it to request view keys or any other secured resources provided by our API.
