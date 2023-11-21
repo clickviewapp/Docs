@@ -1,2 +1,3 @@
 - [Video Selection](v1.0/video-selection.md)
 - [Authentication](v1.0/authentication.md)
+- [View Key Creation](v1.0/view-key-creation.md)
