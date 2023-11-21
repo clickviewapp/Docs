@@ -1,5 +1,7 @@
 # Obtaining a Client Credentials Access Token
 
+_Please feel free to create an issue if you have any questions not answered by this documentation._
+
 ## Overview
 Our API uses the OAuth 2.0 Client Credentials Grant type, which is suitable for server-to-server authentication where the client is acting on its own behalf (the "client" is the application that makes protected resource requests on behalf of the resource owner).
 

@@ -1,1 +1,2 @@
+- [Video Selection](v1.0/video-selection.md)
 - [Authentication](v1.0/authentication.md)
