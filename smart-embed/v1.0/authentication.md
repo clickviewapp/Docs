@@ -1,4 +1,4 @@
-# Obtaining a Client Credentials Access Token
+# Obtaining an Access Token
 
 _Please feel free to create an issue if you have any questions not answered by this documentation._
 
@@ -57,6 +57,8 @@ curl -request GET \
 
 Replace `YOUR_ACCESS_TOKEN` with the actual token you received from the token endpoint.
 
+_More information on using your access token is provided in [Video Playback](video-playback.md)._
+
 ## Handling Errors
 If the request for an access token fails, the server will return an error payload. For example:
 
@@ -70,8 +72,10 @@ If the request for an access token fails, the server will return an error payloa
 Refer to the [OAuth 2.0 Specification](https://tools.ietf.org/html/rfc6749#section-5.2) for a detailed list of potential error codes and their meanings.
 
 ## Best Practices
-- Securely store the `client_secret`.
-- Handle token expiration gracefully by either retrying the request.
+- Securely store the client secret. Ensure you NEVER expose this secret to your user's browser.
+- Create a single token and cache it for all your user's requests, until it expires.
+- Use a popular OAuth2 library for your technology stack. Doing so will ensure that you follow the OAuth2 specification, and will provide graceful error handling and token refreshing out of the box.
+- Ensure that you handle token expiry gracefully by creating a new access token before your old one expires.
 
 ## Next Steps
-After obtaining your access token, you may proceed to use it to request view keys or any other secured resources provided by our API.
+After obtaining your access token, you may proceed to use it to request view keys. Please see [Video Playback](video-playback.md#creating-the-view-key) for information on how to use your access token.
