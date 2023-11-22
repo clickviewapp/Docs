@@ -45,8 +45,8 @@ A successful response will return a JSON object containing the `viewKey` field, 
 ```json
 {
   "mediaId": "123",
-	"viewKey": "eyJz93a...k4laUWw",
-	"embedUrl": "https://integrations.clickviewapp.com/smart-embed/play?viewKey=eyJz93a...k4laUWw"
+  "viewKey": "eyJz93a...k4laUWw",
+  "embedUrl": "https://integrations.clickviewapp.com/smart-embed/play?viewKey=eyJz93a...k4laUWw"
 }
 ```
 
