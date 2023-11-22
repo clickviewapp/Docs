@@ -42,7 +42,7 @@ A successful response will return a JSON object containing the `access_token` fi
 ```
 
 - `access_token`: The token that must be used in API requests to authenticate.
-- `token_type`: Indicates the type of token returned. In this case, it is a Bearer token.
+- `token_type`: Indicates the type of token returned. In this case, it is a bearer token.
 - `expires_in`: The number of seconds until the token expires (86400 means the token is valid for 24 hours).
 - `scope`: Represents the permissions granted to the access token.
 
@@ -78,4 +78,4 @@ Refer to the [OAuth 2.0 Specification](https://tools.ietf.org/html/rfc6749#secti
 - Ensure that you handle token expiry gracefully by creating a new access token before your old one expires.
 
 ## Next Steps
-After obtaining your access token, you may proceed to use it to request view keys. Please see [Video Playback](video-playback.md#creating-the-view-key) for information on how to use your access token.
+After obtaining your access token, you may proceed to use it to request view keys. Please see [Video Playback](video-playback.md#2-creating-a-view-key) for information on how to use your access token.

@@ -56,7 +56,7 @@ Here is an example of a create view key request payload for a student.
 {
   "mediaId": "YOUR_MEDIA_ID",
   "data": {
-    "isStudent": true,
+    "student": true,
     "schoolName": "Walkerville Elementary School",
     "schoolId": "S123",
     "districtName": "Riverside Unified School District",
@@ -71,4 +71,4 @@ Here is an example of a create view key request payload for a student.
 - Ensure that you have reached an agreement with ClickView on how and what data will be sent. Each parnter will go through unique validation.
 
 ## Next Steps
-Once you have created a view key you will need to use the reponse. Please see [View key response](video-playback.md#view-key-response) in the Video Playback workflow.
+Once you have created a view key you will need to use the reponse. Please see [View key response](video-playback.md#3-view-key-response) in the Video Playback workflow.

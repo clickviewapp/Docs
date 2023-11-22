@@ -28,7 +28,7 @@ curl --request POST \
   --data '{
     "mediaId": "YOUR_MEDIA_ID",
     "data": {
-      "isStudent": false,
+      "student": false,
       "firstName": "Valerie",
       "surname": "Frizzle",
       "email": "valerie.frizzle@school.gov"
@@ -53,6 +53,8 @@ A successful response will return a JSON object containing the `viewKey` field, 
 - `mediaId`: The media id that you sent in the request.
 - `viewKey`: A view key that can be used to playback the selected video via an iframe.
 - `embedUrl`: A url that can be used in the `src` attribute of an iframe, this can be used in place of the viewKey if you do not want to build out the url yourself.
+
+At this point you've create a view key and are able to see what playing a video looks like 🎉. Go ahead and paste the `embedUrl` into your browser to give it a try!
 
 _Note: The created view key has a lifetime of 8 hours. A new view key should be created every time a user attempts to watch a video. However an already loaded view key will refresh it's own lifetime, so playback will continue to work for a user who has already loaded the video._
 
