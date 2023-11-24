@@ -20,6 +20,25 @@ Please see [Obtaining an Access Token](authentication.md) for details on how to 
 ### 2. Creating a view key
 To obtain a view key, make a POST request to the view key endpoint provided by the API. Here is an example using `curl`:
 
+**Resource URL**
+```
+POST https://integrations.clickviewapp.com/api/v1/smart-embed/create-view-key
+```
+
+**Headers**
+|Header|Required|Description|
+|---|---|---|
+|`Authorization`|required|Specifies the type of authentication and includes an access token. In this case, it's a Bearer token.|
+|`Content-Type`|required|Specifies the type of content in the HTTP request body. In this case, it's set to `application/json`.|
+
+**Body**
+|Name|Required|Description|
+|---|---|---|
+|`mediaId`|required|Unique identifier for the media to create a view key for.|
+|`data`|required|Please see [Data required for creating a view key](view-key-data.md) for information on populating the `data` property|
+
+**Example usage**
+
 ```sh
 curl --request POST \
   --url https://integrations.clickviewapp.com/api/v1/smart-embed/create-view-key \
@@ -31,7 +50,12 @@ curl --request POST \
       "student": false,
       "firstName": "Valerie",
       "surname": "Frizzle",
-      "email": "valerie.frizzle@school.gov"
+      "email": "valerie.frizzle@school.gov",
+      "jobTitle": "Bus driver",
+      "schoolName": "Walkerville Elementary School",
+      "schoolId": "S123",
+      "districtName": "Riverside Unified School District",
+      "districtId": "D123"
     }
   }'
 ```

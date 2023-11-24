@@ -17,6 +17,26 @@ Please keep your Client Secret confidential to protect the security of your API 
 ### 1. Request an Access Token
 To obtain an access token, make a POST request to the token endpoint provided by the API. Here's an example using `curl`:
 
+**Resource URL**
+```
+POST https://auth.clickviewapp.com/connect/token
+```
+
+**Headers**
+|Name|Required|Description|
+|---|---|---|
+|`Content-Type`|required|Specifies the type of content in the HTTP request body. In this case, it's set to `application/x-www-form-urlencoded` to indicate that the data is URL-encoded form data.|
+
+**Body**
+|Name|Required|Description|
+|---|---|---|
+|`grant_type`|required|Specifies the grant type for the authentication. In this case, it should be set to `client_credentials`.|
+| `client_id`|required|Your client's unique identifier. This is required for client authentication.|
+| `client_secret`|required|Your client's secret key. This is required for client authentication and should be kept confidential.|
+|`scope`|required|Specifies the scope of access for the requested token. In this example, it is set to `smartembed.viewkey`.|
+
+
+**Example usage**
 ```sh
 curl --request POST \
   --url https://auth.clickviewapp.com/connect/token \
