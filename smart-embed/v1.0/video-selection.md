@@ -32,11 +32,11 @@ Replace `YOUR_CLIENT_ID` with your actual Client ID.
 _NOTE: The div wrapping this iframe is optional, but provides an example of how to allow your iframe to display itself responsively._
 
 ### 2. Capture the selected video
-In order to capture information about the user's selected video, we have created a simple javascript API. When a user selects a video, an event will be triggered that your site's javascript may listen to in order to retrieve metadata about the selected video.
+In order to capture information about the user's selected video, we have created a simple JavaScript API. When a user selects a video, an event will be triggered. Use ClickView's `CVEvents` API to listen to this event in order to retrieve metadata about the selected video.
 
-#### Loading in our javascript api
+#### Loading in our CVEvents API
 
-The CVEvents API is available on our CDN: https://static.clickview.com.au/cv-events-api/1.1.1/cv-events-api.min.js. Feel free to embed this directly into your platform like so.
+The `CVEvents` API is available on our CDN: https://static.clickview.com.au/cv-events-api/1.1.1/cv-events-api.min.js. Feel free to embed this directly into your platform like so.
 
 ```html
 <script src="https://static.clickview.com.au/cv-events-api/1.1.1/cv-events-api.min.js" type="text/javascript"></script>

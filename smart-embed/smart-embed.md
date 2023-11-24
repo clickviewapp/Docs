@@ -19,7 +19,7 @@ ClickView will provide you:
 
 Once this exchange has happened, you are ready to start building your Smart Embed integration.
 
-## Lets start building
+## Getting started
 The Smart Embed API comprises of two different workflows.
 
 ### 1. Video Selection
