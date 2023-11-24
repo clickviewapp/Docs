@@ -15,7 +15,7 @@ Please keep your Client Secret confidential to protect the security of your API 
 ## Steps to Obtain an Access Token
 
 ### 1. Request an Access Token
-To obtain an access token, make a POST request to the token endpoint provided by the API. Here's an example using `curl`:
+To obtain an access token, make a POST request to the token endpoint provided by the API.
 
 **Resource URL**
 ```
@@ -37,6 +37,8 @@ POST https://auth.clickviewapp.com/connect/token
 
 
 **Example usage**
+Here's an example using `curl`:
+
 ```sh
 curl --request POST \
   --url https://auth.clickviewapp.com/connect/token \

@@ -18,7 +18,7 @@ In order to create a view key, you first must obtain an OAuth2 access token, via
 Please see [Obtaining an Access Token](authentication.md) for details on how to acheive this.
 
 ### 2. Creating a view key
-To obtain a view key, make a POST request to the view key endpoint provided by the API. Here is an example using `curl`:
+To obtain a view key, make a POST request to the view key endpoint provided by the API.
 
 **Resource URL**
 ```
@@ -38,6 +38,7 @@ POST https://integrations.clickviewapp.com/api/v1/smart-embed/create-view-key
 |`data`|required|Please see [Data required for creating a view key](view-key-data.md) for information on populating the `data` property|
 
 **Example usage**
+Here is an example using `curl`:
 
 ```sh
 curl --request POST \
