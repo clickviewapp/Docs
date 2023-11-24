@@ -3,19 +3,19 @@
 _Please feel free to create an issue if you have any questions not answered by this documentation._
 
 ## Overview
-Our API uses the OAuth 2.0 Client Credentials Grant type, which is suitable for server-to-server authentication where the client is acting on its own behalf (the "client" is the application that makes protected resource requests on behalf of the resource owner).
+Our API uses the OAuth 2.0 Client Credentials grant type, which is designed for server-to-server authorisation. This will allow you to make authorised requests to ClickView servers and resources.
 
 ## Prerequisites
 Before you begin, you should have obtained the following from ClickView:
 - **Client ID**: A public identifier for your use of Smart Embeds.
 - **Client Secret**: A secret known only to you and the authorization server.
 
-Please keep your Client Secret confidential to protect the security of your API access.
+Please keep your Client Secret confidential to protect the security of your API access. Client Secrets are similar to passwords and should be treated with care. Carelessly exposing your Client Secret will result in ClickView revoking access to our API.
 
-## Steps to Obtain an Access Token
+## Steps to obtain an Access Token
 
 ### 1. Request an Access Token
-To obtain an access token, make a POST request to the token endpoint provided by the API.
+To obtain an Access Token, make a POST request to the token endpoint provided by the API.
 
 **Resource URL**
 ```
@@ -94,7 +94,7 @@ If the request for an access token fails, the server will return an error payloa
 Refer to the [OAuth 2.0 Specification](https://tools.ietf.org/html/rfc6749#section-5.2) for a detailed list of potential error codes and their meanings.
 
 ## Best Practices
-- Securely store the client secret. Ensure you NEVER expose this secret to your user's browser.
+- Securely store your Client Secret. Ensure you NEVER expose this secret to your user's browser.
 - Create a single token and cache it for all your user's requests, until it expires.
 - Use a popular OAuth2 library for your technology stack. Doing so will ensure that you follow the OAuth2 specification, and will provide graceful error handling and token refreshing out of the box.
 - Ensure that you handle token expiry gracefully by creating a new access token before your old one expires.

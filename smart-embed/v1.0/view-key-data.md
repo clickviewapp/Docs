@@ -3,9 +3,13 @@
 _Please feel free to create an issue if you have any questions not answered by this documentation._
 
 ## Overview
-This page outlines what data is expected when creating a view key as part of the [Video Playback](video-playback.md) workflow.
+This page outlines the data that is expected when creating a View Key as part of the [Video Playback](video-playback.md) workflow.
 
-The `data` property on the create view key request will be used to pass user information to ClickView. Below is a generic outline of the expected properties, however the data being sent here will be an agreement between you and ClickView, additional properties outside of what is specified may be expected by ClickView. Similarly certain properties may be required that are listed as optional below.
+The `data` property on the create View Key request will be used to pass user information to ClickView. 
+
+The table below shows some common properties the ClickView API expects, however the data being sent here will be determined by your own agreement with ClickView. Is most cases additional properties (outside of what is specified in the table) may be expected by ClickView. 
+
+Similarly certain properties may be required that are listed as optional below.
 
 ### Schema
 
@@ -16,13 +20,13 @@ The `data` property on the create view key request will be used to pass user inf
 |`surname`|Required|Must not be sent|The users surname.|
 |`email`|Required|Must not be sent|The user's email address.|
 |`jobTitle`|Optional|n/a|The user's job title in their school or district.|
-|`schoolName`|Optional|Optional|The name of the school the user belongs to.|
-|`schoolId`|Optional|Optional|Any identifier you may have on hand for the school.|
-|`districtName`|Optional|Optional|The name of the district the user belongs to.|
-|`districtId`|Optional|Optional|Any identifier you may have on hand for the district.|
+|`schoolName`|Required|Required|The name of the school the user belongs to.|
+|`schoolId`|Required|Required|Your internal identifier for the school.|
+|`districtName`|Required|Required|The name of the district the user belongs to.|
+|`districtId`|Required|Required|Your internal identifier for the district.|
 
 ### Restrictions
-If the `student` property is set to true, the view key creation will fail if the following properties are also specified.
+If the `student` property is set to true, the View Key creation will fail if the following properties are also specified.
 - `firstName`
 - `surname`
 - `email`
@@ -30,7 +34,7 @@ If the `student` property is set to true, the view key creation will fail if the
 This is done as a safeguard to ensure student PII is never being sent to ClickView.
 
 ### Example teacher payload
-Here is an example of a create view key request payload with all the metadata populated.
+Here is an example of a create View Key request payload with all the metadata populated.
 
 ```json
 {
@@ -50,7 +54,7 @@ Here is an example of a create view key request payload with all the metadata po
 ```
 
 ### Example student payload
-Here is an example of a create view key request payload for a student.
+Here is an example of a create View Key request payload for a student. You will notice we do not accept any PII for student requests.
 
 ```json
 {
@@ -68,7 +72,7 @@ Here is an example of a create view key request payload for a student.
 ## Best practices
 - For `districtId` and `schoolId`, if you do not have universal identifiers on hand, ClickView would still appreciate any identifiers that are unique within your system, allowing us more reliable mapping as we process the data.
 - Do not send `firstName`, `surname` or `email` for students.
-- Ensure that you have reached an agreement with ClickView on how and what data will be sent. Each parnter will go through unique validation.
+- Ensure that you have reached an agreement with ClickView on which data will be exchanged. The API will validate your payload inline on your agreement with ClickView.
 
 ## Next Steps
 Once you have created a view key you will need to use the reponse. Please see [View key response](video-playback.md#3-view-key-response) in the Video Playback workflow.

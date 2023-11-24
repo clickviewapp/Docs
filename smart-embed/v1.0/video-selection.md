@@ -20,6 +20,7 @@ Here is a simple example of an iframe linking to your web application.
 ```html
 <div style="padding: 56.25% 0 0 0; position: relative; border: 1px solid #eaeaea;">
   <iframe
+    id="clickview-video-select"
     src="https://integrations.clickviewapp.com/smart-embed/select?clientId=YOUR_CLIENT_ID"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     frameborder="0"
@@ -32,9 +33,9 @@ Replace `YOUR_CLIENT_ID` with your actual Client ID.
 _NOTE: The div wrapping this iframe is optional, but provides an example of how to allow your iframe to display itself responsively._
 
 ### 2. Capture the selected video
-In order to capture information about the user's selected video, we have created a simple javascript API. When a user selects a video, an event will be triggered that your site's javascript may listen to in order to retrieve metadata about the selected video.
+In order to capture information about the user's selected video, we have created a simple JavaScript API. When a user selects a video, an event will be triggered. Use ClickView's CVEvents API to listen to this event in order to retrieve metadata about the selected video.
 
-#### Loading in our javascript api
+#### Loading in our CVEvents API
 
 The CVEvents API is available on our CDN: https://static.clickview.com.au/cv-events-api/1.1.1/cv-events-api.min.js. Feel free to embed this directly into your platform like so.
 
@@ -46,9 +47,12 @@ Or alternatively you may download the file and host it directly from your platfo
 
 #### Capturing a selected video event
 
-To use the CVEvents API, first create an instance passing in your iframe:
+To use the `CVEventsApi`, first create an instance passing in your iframe:
 
 ```js
+// your iframe markup
+//<iframe id="clickview-video-select" ...></iframe>
+
 const cvEventsApi = new CVEventsApi(document.getElementById('clickview-video-select').contentWindow);
 cvEventsApi.on('cv-lms-addvideo', (event, details) => {
   // Your logic to save the mediaId here
@@ -76,7 +80,7 @@ Here is an example of a details object:
 The `mediaId` which is returned on the `details` property of the `cv-lms-addvideo` event will be used by you to create a view key each time a user attempts to watch the selected video. You will need to store this selected `mediaId`.
 
 ## Best practices
-- Ensure that the picker is rendered into your site with enough realestate for your users to have a comfortable browsing experience. The preferred approach is to render the picker into a modal that occupies most of the available screen realestate. The minimum recommended size is 800px by 600px.
+- Ensure that the ClickView Picker is rendered into your site with enough realestate for your users to have a comfortable browsing experience. The preferred approach is to render the picker into a modal that occupies most of the available screen realestate. The minimum recommended size is 800px by 600px.
 - Remove the picker iframe from your page once the `cv-lms-addvideo` event is fired. The picker will render a loading spinner, allowing you time to make any http requests you may need to make. However the spinner will spin indefinitely, waiting for your application to either close a modal, or navigate elsewhere.
 - Reach out to ClickView if you have a need to use the `csp` or `sandbox` attributes on your iframes.
 
