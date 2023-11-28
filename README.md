@@ -8,3 +8,4 @@ Documentation for ClickView integration
 - [Image](image/image.md)
 - [Connect API](connect/connect.md)
 - [oEmbed](oembed/oembed.md)
+- [Smart Embed](smart-embed/smart-embed.md)
