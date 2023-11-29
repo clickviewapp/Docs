@@ -24,6 +24,7 @@ Similarly certain properties may be required that are listed as optional below.
 |`schoolId`|Required|Required|Your internal identifier for the school.|
 |`districtName`|Required|Required|The name of the district the user belongs to.|
 |`districtId`|Required|Required|Your internal identifier for the district.|
+|`countryCode`|Required|n/a|The ISO 3166-1 Alpha-2 Codes for which country the user is from. We required this to adhere to data sovereignty laws.|
 
 ### Restrictions
 If the `student` property is set to true, the View Key creation will fail if the following properties are also specified.
@@ -48,7 +49,8 @@ Here is an example of a create View Key request payload with all the metadata po
     "schoolName": "Walkerville Elementary School",
     "schoolId": "S123",
     "districtName": "Riverside Unified School District",
-    "districtId": "D123"
+    "districtId": "D123",
+    "countryCode": "US"
   }
 }
 ```
