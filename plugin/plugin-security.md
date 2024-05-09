@@ -32,5 +32,5 @@ If your site requires the use of a [Content Security Policy (CSP)](https://devel
 ### Example
 
 ```
-Content-Security-Policy: frame-src https://*.clickview.net https://*.clickviewapp.com; https://online.clickview.com.au https://online.clickview.co.uk https://online.clickview.co.nz https://online.clickview.us;
+Content-Security-Policy: frame-src https://*.clickview.net https://*.clickviewapp.com https://online.clickview.com.au https://online.clickview.co.uk https://online.clickview.co.nz https://online.clickview.us;
 ```
