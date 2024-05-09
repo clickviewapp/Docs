@@ -1,7 +1,7 @@
 # Plugin Security
 
 ## iframe Sandbox Attribute
-If you require the use of [iframe sandbox attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#sandbox) on your frames, below is the list of tokens that our plugin requires, both for video selection and playback.
+If you require the use of [iframe sandbox attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#sandbox) on your iframes, below is the list of tokens that our plugin requires, both for video selection and playback.
 
 |Token|Description|Reason|
 |---|---|---|
