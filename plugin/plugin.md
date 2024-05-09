@@ -82,3 +82,6 @@ application:
 ```
 *NOTE: Our plugin will still function normally if the School ID is incorrect, taking the user to the default
 sign in page rather than the expected SSO page.*
+
+# Security
+If your site requires use of a Content Security Policy (CSP) or a sanbox attribute on iframes. [Please see our guide for plugin security](./plugin-security.md).
