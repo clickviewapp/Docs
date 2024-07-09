@@ -30,6 +30,9 @@ oEmbed is supported on the following pages:
 * `https://www.clickview.net/share/embed/{shareCode}`
 
 **Links**:
+
+All the links below are also supported when prefixed with both a country code (e.g. `/au`) and learning level (e.g. `/elementary`, `/middle`, `/high`). For example `https://www.clickview.net/us/elementary/video/{id}/{name}`.
+
 * `https://www.clickview.net/video/{id}/{name}`
 * `https://www.clickview.net/clips/{id}/{name}`
 * `https://www.clickview.net/interactive/{id}/{name}`
