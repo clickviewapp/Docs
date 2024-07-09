@@ -21,17 +21,17 @@ GET https://integrations.clickviewapp.com/oembed
 ## Supported URLs
 oEmbed is supported on the following pages:
 
-**Share Links**:
-* `https://clickv.ie/w/{shortCode}`
-
 **Videos**:
+These will return an oEmbed response of type `video`.
 
+* `https://clickv.ie/w/{shortCode}`
 * `https://www.clickview.net/share/{shareCode}`
 * `https://www.clickview.net/share/embed/{shareCode}`
 
 **Links**:
+These will return an oEmbed response of type `link`.
 
-All the links below are also supported when prefixed with both a country code (e.g. `/us`) and learning level (e.g. `/elementary`, `/middle`, `/high`). For example `https://www.clickview.net/us/elementary/video/{id}/{name}`.
+
 
 * `https://www.clickview.net/video/{id}/{name}`
 * `https://www.clickview.net/clips/{id}/{name}`
@@ -40,6 +40,8 @@ All the links below are also supported when prefixed with both a country code (e
 * `https://www.clickview.net/playlists/{id}/{name}`
 * `https://www.clickview.net/topics/{id}/{name}`
 * `https://www.clickview.net/studios/{id}/{name}`
+
+NOTE: All the links above are also supported when prefixed with both a country code (e.g. `/us`) and learning level (e.g. `/elementary`, `/middle`, `/high`). For example `https://www.clickview.net/us/elementary/video/{id}/{name}`.
 
 ## Example URL
 `GET https://integrations.clickviewapp.com/oembed?url=https://clickv.ie/w/D58w`
