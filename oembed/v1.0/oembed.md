@@ -8,9 +8,7 @@ The ClickView oEmbed API can be used to obtain the the necessary information to 
 ## Resource URL
 
 ```http
-GET https://online.clickview.com.au/oembed
-GET https://online.clickview.co.uk/oembed
-GET https://online.clickview.co.nz/oembed
+GET https://integrations.clickviewapp.com/oembed
 ```
 
 ## Parameters
@@ -23,25 +21,30 @@ GET https://online.clickview.co.nz/oembed
 ## Supported URLs
 oEmbed is supported on the following pages:
 
-**Share Links**:
-* `https://clickv.ie/w/{shortCode}`
-
 **Videos**:
+These will return an oEmbed response of type `video`.
 
-* `/share?sharecode={shareCode}`
-* `/share/embed?sharecode={shareCode}`
+* `https://clickv.ie/w/{shortCode}`
+* `https://www.clickview.net/share/{shareCode}`
+* `https://www.clickview.net/share/embed/{shareCode}`
 
 **Links**:
-* `/exchange/video/{videoId}/*`
-* `/exchange/videos/{videoId}/*`
-* `/exchange/topics/{topicId}/*/videos/{videoId}/*`
-* `/exchange/categories/{categoryId}/*/videos/{videoId}/*`
-* `/exchange/series/{seriesId}/*/videos/{videoId}/*`
-* `/exchange/channels/{channelId}/*/videos/{videoId}/*`
-* `/exchange/channels/{channelId}/*/playlists/*/`
+These will return an oEmbed response of type `link`.
+
+
+
+* `https://www.clickview.net/video/{id}/{name}`
+* `https://www.clickview.net/clips/{id}/{name}`
+* `https://www.clickview.net/interactive/{id}/{name}`
+* `https://www.clickview.net/series/{id}/{name}`
+* `https://www.clickview.net/playlists/{id}/{name}`
+* `https://www.clickview.net/topics/{id}/{name}`
+* `https://www.clickview.net/studios/{id}/{name}`
+
+NOTE: All the links above are also supported when prefixed with both a country code (e.g. `/us`) and learning level (e.g. `/elementary`, `/middle`, `/high`). For example `https://www.clickview.net/us/elementary/video/{id}/{name}`.
 
 ## Example URL
-`GET https://online.clickview.com.au/oembed?url=https://clickv.ie/w/qbMl`
+`GET https://integrations.clickviewapp.com/oembed?url=https://clickv.ie/w/D58w`
 
 ## Example Response
 ```json
@@ -49,16 +52,16 @@ oEmbed is supported on the following pages:
     "type": "video",
     "version": "1.0",
     "title": "The Grinch",
-    "width": 640,
-    "height": 360,
     "author_name": "ClickView",
-    "author_url": "https://online.clickview.com.au",
+    "author_url": "https://www.clickview.net/",
     "provider_name": "ClickView",
-    "provider_url": "https://online.clickview.com.au",
+    "provider_url": "https://www.clickview.net/",
     "cache_age": 600,
-    "thumbnail_url": "https://img.clickviewapp.com/v1/thumbnails/2536805",
-    "thumbnail_height": 256,
-    "thumbnail_width": 144,
-    "html": "<iframe frameborder=\"0\" allowfullscreen webkitallowfullscreen width=\"640\" height=\"360\" src=\"https://online.clickview.com.au/share/embed?sharecode=448e5ed\"></iframe>"
+    "thumbnail_url": "https://img.clickviewapp.com/v2/thumbnails/xAxL5m?size=small",
+    "thumbnail_width": 256,
+    "thumbnail_height": 144,
+    "width": 1014,
+    "height": 576,
+    "html": "<iframe frameborder=\"0\" allowfullscreen webkitallowfullscreen width=\"1014\" height=\"576\" src=\"https://www.clickview.net/share/embed/j3xP0b\"></iframe>"
 }
 ```
